@@ -1,11 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import PortfolioOverview from "@/components/PortfolioOverview";
+import OperatingChart from "@/components/OperatingChart";
+import OccupancyChart from "@/components/OccupancyChart";
+import TrendingProperties from "@/components/TrendingProperties";
+import MyPortfolio from "@/components/MyPortfolio";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container py-8 space-y-8">
+        <PortfolioOverview />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <OperatingChart />
+          <OccupancyChart />
+        </div>
+        
+        <TrendingProperties />
+        
+        <MyPortfolio />
       </div>
     </div>
   );
